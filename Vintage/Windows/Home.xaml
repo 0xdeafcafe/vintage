@@ -5,7 +5,7 @@
 		xmlns:CloseableTab="clr-namespace:CloseableTabItemDemo"
         xmlns:ye="clr-namespace:Vintage"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
-        Title="Home Window - Metro WPF Template" 
+        Title="Home Window - Vintage" 
         d:DesignHeight="700" d:DesignWidth="1200"
         WindowStartupLocation="CenterScreen" AllowsTransparency="True" ResizeMode="CanResize" WindowStyle="None"
         Background="{DynamicResource MainBackgroundBrush}" SnapsToDevicePixels="True" 

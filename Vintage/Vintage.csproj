@@ -94,6 +94,19 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Backend\Settings.cs" />
+    <Compile Include="Films\Halo4Film.cs" />
+    <Compile Include="Films\IHaloFilm.cs" />
+    <Compile Include="IO\Endian.cs" />
+    <Compile Include="IO\EndianReader.cs" />
+    <Compile Include="IO\EndianStream.cs" />
+    <Compile Include="IO\EndianWriter.cs" />
+    <Compile Include="IO\FileTable.cs" />
+    <Compile Include="IO\IReader.cs" />
+    <Compile Include="IO\IWriter.cs" />
+    <Compile Include="IO\StreamUtil.cs" />
+    <Compile Include="Metro\Controls\PageTemplates\FilmEditor.xaml.cs">
+      <DependentUpon>FilmEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Metro\Controls\PageTemplates\IPage.cs" />
     <Compile Include="Metro\Controls\PageTemplates\StartPage.xaml.cs">
       <DependentUpon>StartPage.xaml</DependentUpon>
@@ -302,6 +315,10 @@
     <Page Include="Metro\Controls\OtherMetroTabs.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Metro\Controls\PageTemplates\FilmEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Metro\Controls\PageTemplates\StartPage.xaml">
       <Generator>MSBuild:Compile</Generator>

@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Media.Animation;
 using Vintage.Backend;
 
 namespace Vintage.Metro.Controls.PageTemplates
@@ -20,5 +19,10 @@ namespace Vintage.Metro.Controls.PageTemplates
             mainContent.Visibility = Visibility.Visible;
         }
         public bool Close() { return true; }
+
+        private void btnOpenLocalFilm_Click(object sender, RoutedEventArgs e)
+        {
+            Settings.HomeWindow.AddFilm();
+        }
     }
 }

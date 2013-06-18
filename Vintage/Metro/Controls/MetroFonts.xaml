@@ -2,26 +2,26 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <FontFamily x:Key="MetroFontLight">
-        /MetroWPFTemplate;component/Fonts/#Segoe WP Light
+        /Vintage;component/Fonts/#Segoe WP Light
     </FontFamily>
 
     <FontFamily x:Key="MetroFontSemiLight">
-        /MetroWPFTemplate;component/Fonts/#Segoe WP Semilight
+        /Vintage;component/Fonts/#Segoe WP Semilight
     </FontFamily>
 
     <FontFamily x:Key="MetroFontRegular">
-        /MetroWPFTemplate;component/Fonts/#Segoe WP
+        /Vintage;component/Fonts/#Segoe WP
     </FontFamily>
 
     <FontFamily x:Key="MetroFontSemiBold">
-        /MetroWPFTemplate;component/Fonts/#Segoe WP Semibold
+        /Vintage;component/Fonts/#Segoe WP Semibold
     </FontFamily>
 
     <FontFamily x:Key="MetroFontBold">
-        /MetroWPFTemplate;component/Fonts/#Segoe WP Bold
+        /Vintage;component/Fonts/#Segoe WP Bold
     </FontFamily>
 
     <FontFamily x:Key="MetroFontBlack">
-        /MetroWPFTemplate;component/Fonts/#Segoe WP Black
+        /Vintage;component/Fonts/#Segoe WP Black
     </FontFamily>
 </ResourceDictionary>

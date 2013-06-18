@@ -1,4 +1,5 @@
-﻿using CloseableTabItemDemo;
+﻿using System.Linq;
+using CloseableTabItemDemo;
 using System;
 using System.Runtime.InteropServices;
 using System.Windows;
@@ -11,6 +12,7 @@ using Vintage.Metro.Dialogs;
 using Vintage.Backend;
 using Vintage.Metro.Controls.PageTemplates;
 using Vintage.Metro.Native;
+using System.IO;
 
 namespace Vintage.Windows
 {
@@ -59,8 +61,8 @@ namespace Vintage.Windows
         /// <param name="title">Current Title, Metro WPF Template shall add the rest for you.</param>
         public void UpdateTitleText(string title)
         {
-            this.Title = title.Trim() + " - Metro WPF Template";
-			lblTitle.Text = title.Trim() + " - Metro WPF Template";
+            this.Title = title.Trim() + " - Vintage";
+            lblTitle.Text = title.Trim() + " - Vintage";
         }
 
         /// <summary>
@@ -132,6 +134,34 @@ namespace Vintage.Windows
                 homeTabControl.Items.Remove(toRemove);
         }
 
+        public void AddFilm()
+        {
+            var ofd = new System.Windows.Forms.OpenFileDialog
+                          {
+                              
+                          };
+            if (ofd.ShowDialog() != System.Windows.Forms.DialogResult.OK) return;
+
+            var fileInfo = new FileInfo(ofd.FileName);
+            var closeableTabItem = new CloseableTabItem
+                                       {
+                                           Header = fileInfo.Name,
+                                           HorizontalAlignment = HorizontalAlignment.Stretch,
+                                           VerticalAlignment = VerticalAlignment.Stretch,
+                                           Content = new FilmEditor(ofd.FileName)
+                                       };
+
+            if ((string) closeableTabItem.Header == "swag") return;
+
+            foreach (var tabb in homeTabControl.Items.Cast<TabItem>().Where(tabb => tabb.Header == closeableTabItem.Header))
+            {
+                homeTabControl.SelectedItem = tabb;
+                return;
+            }
+            homeTabControl.Items.Add(closeableTabItem);
+            homeTabControl.SelectedItem = closeableTabItem;
+        }
+
         public enum TabGenre
         {
             StartPage
@@ -143,7 +173,6 @@ namespace Vintage.Windows
             closeableTabItem.Header = regularTabItem.Header = "swag";
             closeableTabItem.HorizontalAlignment = regularTabItem.HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch;
             closeableTabItem.VerticalAlignment = regularTabItem.VerticalAlignment = System.Windows.VerticalAlignment.Stretch;
-
 
             switch (tabG)
             {
